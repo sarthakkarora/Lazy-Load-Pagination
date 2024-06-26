@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #b3b3f5; /* Light lavender background #b3b3f5 */
     margin: 0;
@@ -73,3 +73,126 @@ h1 {
     }
 }
 
+ */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #b3b3f5; /* Light lavender background #b3b3f5 */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.tab-container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ccc;
+    color: #333;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+.employee-card {
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s, border-color 0.3s;
+}
+
+.employee-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #f3d0ff, #e0c3fc);
+    border-color: #8ec5fc;
+}
+
+.employee-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ffffff;
+    transition: border-color 0.3s;
+}
+
+.employee-card:hover img {
+    border-color: #8ec5fc;
+}
+
+.employee-card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2em;
+    color: #333333;
+    transition: color 0.3s;
+}
+
+.employee-card p {
+    margin: 0;
+    color: #555555;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
